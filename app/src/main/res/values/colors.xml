@@ -7,4 +7,15 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="low_transparancy">#ccFFFFFF</color>
+    <color name="high_transparancy">#1aFFFFFF</color>
+    <color name="medium_transparancy">#66FFFFFF</color>
+
+    <color name="dark_blue">#444560</color>
+    <color name="grey">#DEDBDB</color>
+    <color name="_lowgrey">#caDEDBDB</color>
+    <color name="mediumgrey">#1aDEDBDB</color>
+    <color name="highgrey">#66DEDBDB</color>
+
 </resources>
