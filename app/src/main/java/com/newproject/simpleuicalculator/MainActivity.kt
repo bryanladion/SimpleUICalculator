@@ -7,6 +7,8 @@ import android.widget.EditText
 import android.widget.TextView
 import android.os.Build
 import android.view.WindowManager
+import android.widget.Toast
+import android.media.MediaPlayer
 
 import androidx.constraintlayout.widget.ConstraintLayout
 
@@ -98,7 +100,12 @@ class MainActivity : AppCompatActivity() {
             answer.setText(result.toString())
         }
 
-
+    //making a toast and adding audio on click me button
+        val mediaplayer = MediaPlayer.create(this,R.raw.clickme_audio)
+        clickme.setOnClickListener{
+            Toast.makeText(applicationContext,"Bryan B. Ladion",Toast.LENGTH_LONG).show()
+            mediaplayer.start()
+        }
 
 
     }
