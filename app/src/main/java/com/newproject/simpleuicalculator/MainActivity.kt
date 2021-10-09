@@ -64,6 +64,7 @@ class MainActivity : AppCompatActivity() {
           var secondnum = findViewById(R.id.secondNumber) as EditText
           var answer = findViewById(R.id.print_answer) as TextView
 
+
             var num1 = 0
             var num2 = 0
             var result = 0
