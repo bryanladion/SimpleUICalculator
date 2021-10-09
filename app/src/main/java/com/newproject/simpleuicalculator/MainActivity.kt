@@ -9,6 +9,18 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        //setting up transparent.translucent status bar as well as full screen background
+        if(Build.VERSION.SDK_INT>Build.VERSION_CODES.KITKAT){
+
+            getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
+
+
+        }
+
+
+
+
         var layout= findViewById(R.id.backGround) as ConstraintLayout
         var switch= findViewById(R.id.light_switch) as ImageView
         var clickme= findViewById(R.id.light_clickme) as ImageView
