@@ -9,7 +9,6 @@ import android.os.Build
 import android.view.WindowManager
 import android.widget.Toast
 import android.media.MediaPlayer
-
 import androidx.constraintlayout.widget.ConstraintLayout
 
 class MainActivity : AppCompatActivity() {
@@ -19,23 +18,16 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         //setting up transparent.translucent status bar as well as full screen background
-        if(Build.VERSION.SDK_INT>Build.VERSION_CODES.KITKAT){
+        if(Build.VERSION.SDK_INT>Build.VERSION_CODES.KITKAT) getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
 
-            getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
-
-        }
-
-
-
-
-        var layout= findViewById(R.id.backGround) as ConstraintLayout
-        var switch= findViewById(R.id.light_switch) as ImageView
-        var clickme= findViewById(R.id.light_clickme) as ImageView
-        var plus = findViewById(R.id.light_plus) as ImageView
-        var minus = findViewById(R.id.light_minus) as ImageView
-        var devide = findViewById(R.id.light_devide) as ImageView
-        var times = findViewById(R.id.light_times) as ImageView
-        var modulos = findViewById(R.id.light_modulos) as ImageView
+        val layout= findViewById<ConstraintLayout>(R.id.backGround)
+        val switch= findViewById<ImageView>(R.id.light_switch)
+        val clickme= findViewById<ImageView>(R.id.light_clickme)
+        val plus = findViewById<ImageView>(R.id.light_plus)
+        val minus = findViewById<ImageView>(R.id.light_minus)
+        val devide = findViewById<ImageView>(R.id.light_devide)
+        val times = findViewById<ImageView>(R.id.light_times)
+        val modulos = findViewById<ImageView>(R.id.light_modulos)
         var count = 1
         switch.setOnClickListener {
             count += 1
@@ -60,14 +52,13 @@ class MainActivity : AppCompatActivity() {
             }
         }
             // CALCULATOR LOGIC
-          var firstnum = findViewById(R.id.firstNumber) as EditText
-          var secondnum = findViewById(R.id.secondNumber) as EditText
-          var answer = findViewById(R.id.print_answer) as TextView
+          val firstnum = findViewById<EditText>(R.id.firstNumber)
+          val secondnum = findViewById<EditText>(R.id.secondNumber)
+          val answer = findViewById<TextView>(R.id.print_answer)
 
-
-            var num1 = 0
-            var num2 = 0
-            var result = 0
+            var num1 : Int
+            var num2 : Int
+            var result :Int
 
             plus.setOnClickListener{
               num1=Integer.parseInt(firstnum.getText().toString())
@@ -107,7 +98,6 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(applicationContext,"Bryan B. Ladion",Toast.LENGTH_LONG).show()
             mediaplayer.start()
         }
-
 
     }
 }
